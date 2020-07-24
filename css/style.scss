@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+$open: 'Open Sans', sans-serif;
+$main-yellow: #f8b514;
+$main-blue: #000533;
+$pure-white: #FFFFFF;
+$light-blue: #eff2f8;
+$pure-black: #000000;
+$border-grey: #838383;
+
+
+body {
+    color: $pure-white;
+    font-family: $open;
+}
+
+small {
+    font-weight: 300;
+}
+
+.no-padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.no-padding-left {
+    padding-left: 0px !important;
+}
+
+.no-padding-right {
+    padding-right: 0px !important;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.rounded-img {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.rounded-img img{
+    width: auto;
+    height: 100%;
+}
+
+.rounded-img-small {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+.rounded-img-small img{
+    width: auto;
+    height: 100%;
+}
+
+button.more, button.vote {
+    width: 150px;
+    padding: 0.5rem;
+    border: 1px solid $main-blue;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px 0px rgba(0,5,51,1);
+}
+
+button.more {
+    background-color: $pure-white;
+}
+
+button.more a {
+    color: $main-blue;
+}
+
+button.vote {
+    background-color: $main-blue;
+}
+
+button.vote a {
+    color: $pure-white;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 0%;
+    color: $pure-black;
+    display: none;
+    z-index: 10;
+
+    .close-btn {
+        text-decoration: none;
+        float: right;
+        font-size: 16px;
+        font-weight: bold;
+        color: $pure-black;
+      }
+
+    .popup-content {
+        border: 1px solid $main-blue;
+        border-radius: 20px;
+        background-color: $pure-white;
+    }
+
+    input {
+        border: 1px solid $main-blue;
+        border-radius: 18px;
+    }
+
+    button {
+        color: white;
+        background-color: $main-yellow;
+        border-radius: 25px;
+        border-color: transparent;
+    }
+}
+
+.popup:target, .popup:target + #cover {
+    display: block;
+    opacity: 2;
+}
+
+#cover{
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    z-index:5;
+    width:100%;
+    height:100%;
+    display:none;
+  }
+
+
+section#intro {
+    $nav-height: 35px;
+
+    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../img/_14A7320_bearb_cmyk.jpg") no-repeat 68%;
+    min-height: 100%;
+    background-size: cover;
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: $nav-height;
+        display: flex;
+    }
+
+    nav ul li {
+        display: inline-block;
+        height: 100%;
+        width: auto;
+    }
+
+    img {
+        height: 100%;
+        width: auto;
+    }
+
+    .gls-link{
+        display: flex;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 35px;
+            border-left:solid $pure-white 1px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: $pure-white;
+            font-size: small;
+        }
+    }
+
+    button#thinkSocial {
+        background-color: transparent;
+        border: 1px solid $pure-white;
+        border-radius: 25px;
+        color:  $pure-white;
+        font-size: 24px;
+    }
+
+    button#thinkSocial a{
+        color:  $pure-white;
+    }
+}
+
+section#rules{
+    color: $pure-black;
+    background-color: $light-blue;
+/*     &::after{
+        display: block;
+        content: "";
+        width: 100vw;
+        height: 20px;
+        background: black url(../img/after.png) no-repeat;
+    } */
+}
+
+section#project-kapka{
+    color: $pure-black;
+    
+    .rounded-img img{
+        margin-left: -90px;
+    }
+
+    .commentary {
+        border-left: 1px solid  $border-grey;
+        border-bottom: 1px solid  $border-grey;
+        border-top: 1px solid  $border-grey;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .rounded-img-small img{
+        margin-left: -20px;
+        transform: rotate(90deg);
+    }
+}
+
+section#project-centrum{
+    color: $pure-black;
+    background-color: $light-blue;
+
+    .rounded-img img{
+        margin-left: -60px;
+    }
+
+    .commentary {
+        border-right: 1px solid  $border-grey;
+        border-bottom: 1px solid  $border-grey;
+        border-top: 1px solid  $border-grey;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+section#project-fond{
+    color: $pure-black;
+
+    .rounded-img img{
+        margin-left: -60px;
+    }
+
+    .commentary {
+        border-left: 1px solid  $border-grey;
+        border-bottom: 1px solid  $border-grey;
+        border-top: 1px solid  $border-grey;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .rounded-img-small img{
+        width: 120px;
+        height: auto
+    }
+
+}
+
+section#results {
+    color: $pure-black;
+
+    .numbers {
+        color: $main-yellow;
+        font-size: 70px;
+        font-weight: 900;
+        line-height: 60px;
+        height: 70px;
+        display: inline-block;
+    }
+
+}
+
+section#footer {
+    background: $main-blue;
+    min-height: 100%;
+    background-size: cover;
+
+    button {
+        background-color: transparent;
+        border: 1px solid $pure-white;
+        border-radius: 25px;
+        color:  $pure-white;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    button a{
+        color:  $pure-white;
+    }
+
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

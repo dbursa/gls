@@ -1,0 +1,24 @@
+{
+  "name": "gls",
+  "version": "1.0.0",
+  "description": "Voting page for gls",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "./node_modules/.bin/node-sass -o css css/style.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbursa/gls.git"
+  },
+  "author": "Daniel Bursa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbursa/gls/issues"
+  },
+  "homepage": "https://github.com/dbursa/gls#readme"
+}
