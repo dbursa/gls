@@ -1,29 +1,17 @@
+<!-- TYHLE TAGY MUSI BYT V HLAVICCE -->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <meta name="csrf_name" content="<?= $name ?>" />
 <meta name="csrf_value" content="<?= $value ?>" />
 
-<h1> helou </h1>
+<!-- TAKHLE PROPISEME CELKOVY POCET HLASU -->
+<h1> helou <?= $votes_count ?> </h1>
 
+<!-- INPUT EMAILU V POPUPU POTREBUJE id="email_input" -->
+<input type="text" name="email_input" id="email_input">
+<!-- JEDNOTLIVY BUTTONY PRO HLASOVANI AKORAT JINY ID -->
+<button id="button_project_1">VOTE 1</button>
+<button id="button_project_2">VOTE 2</button>
+<button id="button_project_3">VOTE 3</button>
 
-<script>
-const csrf_name_val = document.querySelector('meta[name="csrf_name"]').content
-const csrf_value_val = document.querySelector('meta[name="csrf_value"]').content
-
-const csrf_data = {csrf_name : csrf_name_val,csrf_value : csrf_value_val}
-const params = new URLSearchParams();
-params.append('csrf_name', csrf_name_val);
-params.append('csrf_value', csrf_value_val);
-const config = {
-  headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
-  }
-}
-axios.post('/api/test', params, config)
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (err) {
-      console.log(err)
-  })
-</script>
+<!-- TENHLE SCRIPT NA KONCI BODY -->
+<script src="frontend/js/vote.js"></script>

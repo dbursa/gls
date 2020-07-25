@@ -12,17 +12,21 @@ require __DIR__ . '/vendor/autoload.php';
 // Start PHP session
 session_start();
 
+// Load .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // DI
 $container = new Container();
 AppFactory::setContainer($container);
 
 $container->set('actions', function () {
     $database = new Dibi\Connection([
-        'driver'   => 'mysqli',
-        'host'     => '127.0.0.1',
-        'username' => 'root',
-        'password' => 'root',
-        'database' => 'gls',
+        'driver'   => $_ENV['DB_DRIVER'],
+        'host'     => $_ENV['DB_HOST'],
+        'username' => $_ENV['DB_USERNAME'],
+        'password' => $_ENV['DB_PASSWORD'],
+        'database' => $_ENV['DB_DATABASE'],
     ]);
     $actions = new Webinity\Actions($database);
     return $actions;
@@ -74,26 +78,76 @@ $app->get('/', function (Request $request, Response $response, $args){
     $name = $request->getAttribute($nameKey);
     $value = $request->getAttribute($valueKey);
 
+    // Celkovy pocet hlasu
+    $actions = $this->get('actions');
+    $votes_count = $actions->votesCount();
+
     return $this->get('renderer')->render($response, "test.php", [
         'nameKey' => $nameKey,
         'valueKey' => $valueKey,
         'name' => $name,
-        'value' => $value
+        'value' => $value,
+        'votes_count' => $votes_count
     ]);
 });
 
-$app->post('/api/test', function (Request $request, Response $response, $args) {
-    $test = $request->getParsedBody();
-    //$response->getBody()->write($test['name']);
-    $response->getBody()->write('testt');
+/**
+ * POST route to vote
+ */
+$app->post('/api/vote', function (Request $request, Response $response) {
+    // Request Body
+    $payload = $request->getParsedBody();
+    $project_id = array_key_exists('project_id', $payload) ? $payload['project_id'] : null;
+    $email = array_key_exists('email', $payload) ? $payload['email'] : null;
 
+    // Nevalidni email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !$project_id) {
+        $response->getBody()->write(json_encode(['error_type' => 1, 'status' => 'E-mail musí být vyplněný a ve správném formátu.']));
+        return $response
+            ->withHeader('Content-Type', 'application/json')
+            ->withStatus(400);
+    }
+
+    // Zkusit vlozit do DB
+    $actions = $this->get('actions');
+    try {
+        $id = $actions->vote($project_id, $email);
+    }catch (Dibi\UniqueConstraintViolationException $e){
+        $response->getBody()->write(json_encode(['error_type' => 2, 'status' => 'Pomocí tohoto e-mailu již nelze hlasovat.']));
+        return $response
+            ->withHeader('Content-Type', 'application/json')
+            ->withStatus(400);
+    }
+
+    // Everything should be fine, return 201
+    $response->getBody()->write(json_encode(['status' => 'Váš hlas jsme úspěšně zpracovali.']));
     return $response
         ->withHeader('Content-Type', 'application/json')
         ->withStatus(201);
 });
 
+/**
+ * Ukaze vysledky pod heslem
+ */
+$app->get('/vysledky', function (Request $request, Response $response) {
+    $actions = $this->get('actions');
+    $votes_projects = $actions->votesProjects();
+
+    return $this->get('renderer')->render($response, "vysledky.php", [
+        'votes_projects' => $votes_projects
+    ]);
+});
+
 
 /**
+ * 
+ *  _  _    ___  _  _   
+ * | || |  / _ \| || |  
+ * | || |_| | | | || |_ 
+ * |__   _| | | |__   _|
+ *    | | | |_| |  | |  
+ *    |_|  \___/   |_|  
+ * 
  * Catch-all route to serve a 404 Not Found page if none of the routes match
  * NOTE: make sure this route is defined last
  */
