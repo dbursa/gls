@@ -152,7 +152,7 @@ button.vote a {
 section#intro {
     $nav-height: 35px;
 
-    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../img/_14A7320_bearb_cmyk.jpg") no-repeat 68%;
+    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../img/uvodni_foto_sm.jpg") no-repeat 68%;
     min-height: 100%;
     background-size: cover;
 
@@ -309,7 +309,6 @@ section#footer {
     button a{
         color:  $pure-white;
     }
-
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
@@ -319,9 +318,36 @@ section#footer {
         height: 270px;
     }
 
+
+/*
+* branch vojtafe styles
+*/
+
+  
+  hr.srdce{
+    text-align: center; /* horizontal centering */
+    line-height: 1px; /* vertical centering */
+    height: 1px; /* gap between the lines */
+    border-style: solid;
+
+    &::after{
+        content: url("../img/srdicko.png");
+        position: relative;
+        top: -22px;
+    } 
+  }
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
     .anti-row {
         display: flex !important;
     }
+
 
     .commentary {
         border: 1px solid  $border-grey;

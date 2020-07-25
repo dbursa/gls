@@ -111,7 +111,7 @@ button.vote a {
   display: none; }
 
 section#intro {
-  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../img/_14A7320_bearb_cmyk.jpg") no-repeat 68%;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../img/uvodni_foto_sm.jpg") no-repeat 68%;
   min-height: 100%;
   background-size: cover; }
   section#intro nav ul {
@@ -224,6 +224,23 @@ section#footer {
   section#footer button a {
     color: #FFFFFF; }
 
+
+/*
+* branch vojtafe styles
+*/
+hr.srdce {
+  text-align: center;
+  /* horizontal centering */
+  line-height: 1px;
+  /* vertical centering */
+  height: 1px;
+  /* gap between the lines */
+  border-style: solid; }
+  hr.srdce::after {
+    content: url("../img/srdicko.png");
+    position: relative;
+    top: -22px; }
+
 @media (min-width: 768px) {
   .rounded-img {
     width: 270px;
@@ -233,3 +250,4 @@ section#footer {
   .commentary {
     border: 1px solid #838383;
     border-radius: 10px; } }
+
