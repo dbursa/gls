@@ -209,7 +209,8 @@ section#results {
 section#footer {
   background: #000533;
   min-height: 100%;
-  background-size: cover; }
+  background-size: cover;
+  box-shadow: 0px -5px 15px 0px rgba(0, 5, 51, 0.75); }
   section#footer button {
     background-color: transparent;
     border: 1px solid #FFFFFF;
