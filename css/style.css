@@ -23,6 +23,9 @@ small {
 .no-wrap {
   white-space: nowrap; }
 
+.anti-row {
+  display: block !important; }
+
 .rounded-img {
   border-radius: 50%;
   overflow: hidden;
@@ -221,6 +224,7 @@ section#footer {
   section#footer button a {
     color: #FFFFFF; }
 
+
 /*
 * branch vojtafe styles
 */
@@ -236,3 +240,14 @@ hr.srdce {
     content: url("../img/srdicko.png");
     position: relative;
     top: -22px; }
+
+@media (min-width: 768px) {
+  .rounded-img {
+    width: 270px;
+    height: 270px; }
+  .anti-row {
+    display: flex !important; }
+  .commentary {
+    border: 1px solid #838383;
+    border-radius: 10px; } }
+
