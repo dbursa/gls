@@ -40,6 +40,10 @@ small {
     white-space: nowrap;
 }
 
+.anti-row {
+    display: block !important;
+}
+
 .rounded-img {
     border-radius: 50%;
     overflow: hidden;
@@ -307,16 +311,23 @@ section#footer {
     }
 
 }
-
-
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
-
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+    .rounded-img {
+        width: 270px;
+        height: 270px;
+    }
+
+    .anti-row {
+        display: flex !important;
+    }
+
+    .commentary {
+        border: 1px solid  $border-grey;
+        border-radius: 10px;
+    }
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {}
