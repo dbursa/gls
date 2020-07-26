@@ -9,14 +9,16 @@
 </head>
 <body>
 <section id="intro">
-    <nav class="px-2 py-3 my-auto">
+    <nav class="px-2 px-md-5 py-3 my-auto">
         <div class="row no-gutters">
-            <ul class="d-none d-md-inline-block col-md-6">
-                <li class="pr-3"> 
-                    <img src="img/GLS_Logo_Color_neg_CMYK_C_2013-01.png" alt="GLS Logo">
+            <ul class="d-none d-md-inline-block col-md-5 offset-md-1">
+                <li class="pr-3 pr-md-0"> 
+                    <a href="#">
+                        <img src="img/GLS_Logo_Color_neg_CMYK_C_2013-01.png" alt="GLS Logo">
+                    </a>
                 </li>
             </ul>  
-            <ul class="col-md-6 justify-content-end">
+            <ul class="col-md-5 justify-content-end">
                 <li class="pr-3 d-md-none"> 
                     <img src="img/GLS_Logo_Color_neg_CMYK_C_2013-01.png" alt="GLS Logo">
                 </li>
@@ -31,7 +33,7 @@
                     </a>
                 </li>
                 <li class="gls-link">
-                    <a class="pl-2" href="#" target="_blank" rel="noopener noreferrer"><span class="no-wrap">www.gls-czech.com</span></a>
+                    <a class="pl-2" href="https://gls-group.eu/CZ/cs/home" target="_blank" rel="noopener noreferrer"><span class="no-wrap">www.gls-czech.com</span></a>
                 </li>
             </ul>    
         </div>
@@ -78,7 +80,7 @@
 <section id="rules">
     <div class="container pt-3">
         <div class="text-center col-12 py-3">
-            <h2 class="m-0"><b>Jak probíhá hlasování</b></h2>
+            <h1 class="m-0"><b>Jak probíhá hlasování</b></h1>
         </div>
         <div class="row text-center">
             <div class="col-12 col-md-4 pb-2">
@@ -397,29 +399,48 @@
     </div>
 </section>
 <section id="footer">
-    <footer class="pt-3">
-        <div class="container text-left">
-            <div class="pb-3 text-center text-md-left">
-                <h4 class="pb-3"><b>Sdílejte projekt se známými</b></h4>
-                <h5>Dejte jim o možnosti pomáhat vědět na Facebooku!</h5>
+    <footer class="pt-3 py-md-5">
+        <div class="container text-left height-lg">
+            <div class="pb-3 pb-md-5 text-center text-md-left">
+                <h4 class="pb-3 d-md-none"><b>Sdílejte projekt se známými</b></h4>
+                <h5 class="d-md-none"> - dejte jim o možnosti pomáhat vědět na Facebooku!</h5>
+                <h3 class="d-none d-md-block"><b>Sdílejte projekt se známými</b></h4>
+                <h4 class="d-none d-md-block"> - dejte jim o možnosti pomáhat vědět na Facebooku!</h5>
             </div>
             <div class="w-100 text-center text-md-left">
-                <button class="px-4 py-2">Sdílejte na profilu</button>
+                <button id="fb-root" class="px-4 py-2">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpomahame.gls-czech.cz%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Sdílejte na profilu</a>
+                </button>
+            </div>
+        </div>
+        <div class="d-none d-md-block container text-left">
+            <div class="font-weight-light">
+                <div class="row no-gutters">
+                    <div class="my-auto"> Ve spolupráci s komunikační agenturou</div> 
+                    <div class="" style="width: auto; height: 50px;">
+                        <a href="https://allmedia4u.cz/"><img class="mw-100 mh-100" src="img/allmedia_logo_white_Kreslicí plátno 1.png" alt=""></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="d-md-none">
             <img class="img-fluid" src="img/15_let_1800x3000_transparentn¡.png" alt="">
         </div>
-        <div>
-            <img src="img/15let_grafika_transparent.png" alt="">
-        </div>
-        <div class="container text-md-left">
-            <p class="m-0 font-weight-light">Ve spolupráci s komunikační agenturou imgHere allmedia4u</p>
+        <div class="container d-md-none align-text-bottom">
+            <div class="font-weight-light pb-2">
+                <div class="row no-gutters">
+                    <div class="my-auto"><small>Ve spolupráci s komunikační agenturou</small></div> 
+                    <div class="my-auto" style="width: 110px; height: auto;">
+                        <a href="https://allmedia4u.cz/"><img class="mw-100 mh-100" src="img/allmedia_logo_white_Kreslicí plátno 1.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </section>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v7.0&appId=568770667084818&autoLogAppEvents=1" nonce="tEdcbfw6"></script>
 </body>
 </html>

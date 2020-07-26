@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
 
-$open: 'Open Sans', sans-serif;
+$open: 'Open Sans',
+sans-serif;
 $main-yellow: #f8b514;
 $main-blue: #000533;
 $pure-white: #FFFFFF;
@@ -53,7 +55,7 @@ small {
     height: 200px;
 }
 
-.rounded-img img{
+.rounded-img img {
     width: auto;
     height: 100%;
 }
@@ -67,17 +69,22 @@ small {
     position: relative;
 }
 
-.rounded-img-small img{
+.rounded-img-small img {
     width: auto;
     height: 100%;
 }
 
-button.more, button.vote {
+button a {
+    text-decoration: none !important;
+}
+
+button.more,
+button.vote {
     width: 150px;
     padding: 0.5rem;
     border: 1px solid $main-blue;
     border-radius: 20px;
-    box-shadow: 0px 0px 2px 0px rgba(0,5,51,1);
+    box-shadow: 0px 0px 2px 0px rgba(0, 5, 51, 1);
 }
 
 button.more {
@@ -115,7 +122,7 @@ button.vote a {
         font-size: 16px;
         font-weight: bold;
         color: $pure-black;
-      }
+    }
 
     .popup-content {
         border: 1px solid $main-blue;
@@ -144,21 +151,22 @@ button.vote a {
     }
 }
 
-.popup:target, .popup:target + #cover {
+.popup:target,
+.popup:target+#cover {
     display: block;
     opacity: 2;
 }
 
-#cover{
-    position:fixed;
-    top:0;
-    left:0;
-    background:rgba(0,0,0,0.6);
-    z-index:5;
-    width:100%;
-    height:100%;
-    display:none;
-  }
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
 
 
 section#intro {
@@ -187,13 +195,14 @@ section#intro {
         width: auto;
     }
 
-    .gls-link{
+    .gls-link {
         display: flex;
+
         &::before {
             content: "";
             position: absolute;
             height: 35px;
-            border-left:solid $pure-white 1px;
+            border-left: solid $pure-white 1px;
         }
 
         a {
@@ -208,81 +217,74 @@ section#intro {
         background-color: transparent;
         border: 1px solid $pure-white;
         border-radius: 25px;
-        color:  $pure-white;
+        color: $pure-white;
         font-size: 24px;
     }
 
-    button#thinkSocial a{
-        color:  $pure-white;
+    button#thinkSocial a {
+        color: $pure-white;
     }
 }
 
-section#rules{
+section#rules {
     color: $pure-black;
     background-color: $light-blue;
-/*     &::after{
-        display: block;
-        content: "";
-        width: 100vw;
-        height: 20px;
-        background: black url(../img/after.png) no-repeat;
-    } */
 }
 
-section#project-kapka{
+section#project-kapka {
     color: $pure-black;
-    
-    .rounded-img img{
+
+    .rounded-img img {
         margin-left: -90px;
     }
 
     .commentary {
-        border-left: 1px solid  $border-grey;
-        border-bottom: 1px solid  $border-grey;
-        border-top: 1px solid  $border-grey;
+        border-left: 1px solid $border-grey;
+        border-bottom: 1px solid $border-grey;
+        border-top: 1px solid $border-grey;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
 
-    .rounded-img-small img{
+    .rounded-img-small img {
         margin-left: -20px;
         transform: rotate(90deg);
     }
 }
 
-section#project-centrum{
+section#project-centrum {
     color: $pure-black;
     background-color: $light-blue;
 
-    .rounded-img img{
+    .rounded-img img {
         margin-left: -60px;
     }
 
     .commentary {
-        border-right: 1px solid  $border-grey;
-        border-bottom: 1px solid  $border-grey;
-        border-top: 1px solid  $border-grey;
+        border-right: 1px solid $border-grey;
+        border-bottom: 1px solid $border-grey;
+        border-top: 1px solid $border-grey;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
     }
 }
 
-section#project-fond{
+section#project-fond {
     color: $pure-black;
 
-    .rounded-img img{
+    .rounded-img img {
         margin-left: -60px;
     }
 
     .commentary {
-        border-left: 1px solid  $border-grey;
-        border-bottom: 1px solid  $border-grey;
-        border-top: 1px solid  $border-grey;
+        border-left: 1px solid $border-grey;
+        border-bottom: 1px solid $border-grey;
+        border-top: 1px solid $border-grey;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
 
-    .rounded-img-small img{
+    .rounded-img-small img {
         width: 120px;
         height: auto
     }
@@ -313,19 +315,15 @@ section#footer {
         background-color: transparent;
         border: 1px solid $pure-white;
         border-radius: 25px;
-        color:  $pure-white;
+        color: $pure-white;
         font-size: 24px;
         font-weight: 600;
     }
 
-    button a{
-        color:  $pure-white;
+    button a {
+        color: $pure-white;
     }
 }
-
-/*
-* branch vojtafe styles
-*/
 
   
 hr.srdce{
@@ -354,25 +352,68 @@ hr.srdce{
         margin-right: 25%;
     }
 
+}
+
     .anti-row {
         display: flex !important;
     }
 
 
     .commentary {
-        border: 1px solid  $border-grey;
+        border: 1px solid $border-grey;
         border-radius: 10px;
     }
 
-    section#results {    
+    section#intro {
+        background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../img/uvodni_foto_sm.jpg") no-repeat;
+        background-position: 60% 20%;
+        min-height: 750px;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 18px;
+
+        }
+
+        button#thinkSocial {
+            font-size: 32px;
+
+        }
+
+        img {
+            height: 130%;
+            width: auto;
+        }
+
+        nav ul.offset-md-1 {
+            margin-left: 8.333333%;
+        }
+
+        .gls-link {
+            height: 45px;
+
+            &::before {
+                height: 45px;
+            }
+
+            a {
+                font-size: medium;
+            }
+        }
+    }
+
+    section#results {
         .numbers {
             font-size: 140px;
             line-height: 130px;
             height: 140px;
         }
-    
+
     }
-}
+
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
@@ -383,5 +424,15 @@ hr.srdce{
     }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+    section#footer {
+        background: url("../img/15_let_s_pozad¡m.png") no-repeat 100%;
+        min-height: 600px;
+        background-size: cover;
+
+        .height-lg{ 
+            height: calc(600px - 6rem);
+        }
+
+
+    }
+}
