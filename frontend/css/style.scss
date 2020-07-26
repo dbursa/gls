@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+$open: 'Open Sans',
+sans-serif;
+$main-yellow: #f8b514;
+$main-blue: #000533;
+$pure-white: #FFFFFF;
+$light-blue: #eff2f8;
+$pure-black: #000000;
+$border-grey: #838383;
+
+
+body {
+    color: $pure-white;
+    font-family: $open;
+}
+
+small {
+    font-weight: 300;
+}
+
+.no-padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.no-padding-left {
+    padding-left: 0px !important;
+}
+
+.no-padding-right {
+    padding-right: 0px !important;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.anti-row {
+    display: block !important;
+}
+
+.rounded-img {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.rounded-img img {
+    width: auto;
+    height: 100%;
+}
+
+.rounded-img-small {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+.rounded-img-small img {
+    width: auto;
+    height: 100%;
+}
+
+button a {
+    text-decoration: none !important;
+}
+
+button.more,
+button.vote {
+    width: 150px;
+    padding: 0.5rem;
+    border: 1px solid $main-blue;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 5, 51, 1);
+}
+
+button.more {
+    background-color: $pure-white;
+}
+
+button.more a {
+    color: $main-blue;
+}
+
+button.vote {
+    background-color: $main-blue;
+}
+
+button.vote a {
+    color: $pure-white;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    top: 30%;
+    left: 0%;
+    color: $pure-black;
+    display: none;
+    z-index: 10;
+
+    .popup-text {
+        font-size: 20px;
+    }
+
+    .close-btn {
+        text-decoration: none;
+        float: right;
+        font-size: 16px;
+        font-weight: bold;
+        color: $pure-black;
+    }
+
+    .popup-content {
+        border: 1px solid $main-blue;
+        border-radius: 20px;
+        background-color: $pure-white;
+    }
+
+    input {
+        border: 1px solid $main-blue;
+        border-radius: 18px;
+    }
+
+    button {
+        color: white;
+        background-color: $main-yellow;
+        border-radius: 25px;
+        border-color: transparent;
+    }
+    
+    .popup-success-alert {
+        display: none;
+    }
+
+    .popup-error-alert {
+        display: none;
+    }
+}
+
+.popup:target,
+.popup:target+#cover {
+    display: block;
+    opacity: 2;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+section#intro {
+    $nav-height: 35px;
+
+    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../img/uvodni_foto_sm.jpg") no-repeat 68%;
+    min-height: 100%;
+    background-size: cover;
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: $nav-height;
+        display: flex;
+    }
+
+    nav ul li {
+        display: inline-block;
+        height: 100%;
+        width: auto;
+    }
+
+    img {
+        height: 100%;
+        width: auto;
+    }
+
+    .gls-link {
+        display: flex;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 35px;
+            border-left: solid $pure-white 1px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: $pure-white;
+            font-size: small;
+        }
+    }
+
+    button#thinkSocial {
+        background-color: transparent;
+        border: 1px solid $pure-white;
+        border-radius: 25px;
+        color: $pure-white;
+        font-size: 24px;
+    }
+
+    button#thinkSocial a {
+        color: $pure-white;
+    }
+}
+
+section#rules {
+    color: $pure-black;
+    background-color: $light-blue;
+}
+
+section#project-kapka {
+    color: $pure-black;
+
+    .rounded-img img {
+        margin-left: -90px;
+    }
+
+    .commentary {
+        border-left: 1px solid $border-grey;
+        border-bottom: 1px solid $border-grey;
+        border-top: 1px solid $border-grey;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .rounded-img-small img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+section#project-centrum {
+    color: $pure-black;
+    background-color: $light-blue;
+
+    .rounded-img img {
+        margin-left: -60px;
+    }
+
+    .commentary {
+        border-right: 1px solid $border-grey;
+        border-bottom: 1px solid $border-grey;
+        border-top: 1px solid $border-grey;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+section#project-fond {
+    color: $pure-black;
+
+    .rounded-img img {
+        margin-left: -60px;
+    }
+
+    .commentary {
+        border-left: 1px solid $border-grey;
+        border-bottom: 1px solid $border-grey;
+        border-top: 1px solid $border-grey;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .rounded-img-small img {
+        width: 120px;
+        height: auto
+    }
+
+}
+
+section#results {
+    color: $pure-black;
+
+    .numbers {
+        color: $main-yellow;
+        font-size: 70px;
+        font-weight: 900;
+        line-height: 60px;
+        height: 70px;
+        display: inline-block;
+    }
+
+}
+
+section#footer {
+    background: $main-blue;
+    min-height: 100%;
+    background-size: cover;
+    box-shadow: 0px -1px 15px 7px rgba(0, 5, 51, 0.2);
+
+    button {
+        background-color: transparent;
+        border: 1px solid $pure-white;
+        border-radius: 25px;
+        color: $pure-white;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    button a {
+        color: $pure-white;
+    }
+}
+
+  
+hr.srdce{
+    text-align: center; /* horizontal centering */
+    line-height: 1px; /* vertical centering */
+    height: 1px; /* gap between the lines */
+    border-style: solid;
+
+    &::after{
+        content: url("../img/srdicko.png");
+        position: relative;
+        top: -22px;
+    } 
+  }
+  
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+    .rounded-img {
+        width: 270px;
+        height: 270px;
+    }
+    .popup {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+
+
+    .anti-row {
+        display: flex !important;
+    }
+
+
+    .commentary {
+        border: 1px solid $border-grey;
+        border-radius: 10px;
+    }
+
+    section#intro {
+        background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../img/uvodni_foto_sm.jpg") no-repeat;
+        background-position: 60% 20%;
+        min-height: 750px;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 18px;
+
+        }
+
+        button#thinkSocial {
+            font-size: 32px;
+
+        }
+
+        img {
+            height: 130%;
+            width: auto;
+        }
+
+        nav ul.offset-md-1 {
+            margin-left: 8.333333%;
+        }
+
+        .gls-link {
+            height: 45px;
+
+            &::before {
+                height: 45px;
+            }
+
+            a {
+                font-size: medium;
+            }
+        }
+    }
+
+    section#results {
+        .numbers {
+            font-size: 140px;
+            line-height: 130px;
+            height: 140px;
+        }
+
+    }
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .popup {
+        width: 30%;
+        margin-left: 35%;
+        margin-right: 35%;
+    }
+}
+
+    section#footer {
+        background: url("../img/15_let_s_pozad¡m.png") no-repeat 100%;
+        min-height: 600px;
+        background-size: cover;
+
+        .height-lg{ 
+            height: calc(600px - 6rem);
+        }
+
+
+    }
+}

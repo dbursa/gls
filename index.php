@@ -82,7 +82,7 @@ $app->get('/', function (Request $request, Response $response, $args){
     $actions = $this->get('actions');
     $votes_count = $actions->votesCount();
 
-    return $this->get('renderer')->render($response, "test.php", [
+    return $this->get('renderer')->render($response, "main.php", [
         'nameKey' => $nameKey,
         'valueKey' => $valueKey,
         'name' => $name,
