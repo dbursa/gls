@@ -336,14 +336,6 @@ section#footer {
         top: -22px;
     } 
   }
-
-
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
-
     .anti-row {
         display: flex !important;
     }
@@ -352,6 +344,15 @@ section#footer {
     .commentary {
         border: 1px solid  $border-grey;
         border-radius: 10px;
+    }
+
+    section#results {    
+        .numbers {
+            font-size: 140px;
+            line-height: 130px;
+            height: 140px;
+        }
+    
     }
 }
 
