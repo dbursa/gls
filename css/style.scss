@@ -106,11 +106,15 @@ button.vote a {
 .popup {
     position: fixed;
     width: 100%;
-    top: 50%;
+    top: 30%;
     left: 0%;
     color: $pure-black;
     display: none;
     z-index: 10;
+
+    .popup-text {
+        font-size: 20px;
+    }
 
     .close-btn {
         text-decoration: none;
@@ -136,6 +140,14 @@ button.vote a {
         background-color: $main-yellow;
         border-radius: 25px;
         border-color: transparent;
+    }
+    
+    .popup-success-alert {
+        display: none;
+    }
+
+    .popup-error-alert {
+        display: none;
     }
 }
 
@@ -313,6 +325,20 @@ section#footer {
     }
 }
 
+  
+hr.srdce{
+    text-align: center; /* horizontal centering */
+    line-height: 1px; /* vertical centering */
+    height: 1px; /* gap between the lines */
+    border-style: solid;
+
+    &::after{
+        content: url("../img/srdicko.png");
+        position: relative;
+        top: -22px;
+    } 
+  }
+  
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
 
@@ -320,20 +346,13 @@ section#footer {
         width: 270px;
         height: 270px;
     }
-
-
-    hr.srdce {
-        text-align: center;
-        line-height: 1px;
-        height: 1px;
-        border-style: solid;
-
-        &::after {
-            content: url("../img/srdicko.png");
-            position: relative;
-            top: -22px;
-        }
+    .popup {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
     }
+
+}
 
     .anti-row {
         display: flex !important;
@@ -395,14 +414,25 @@ section#footer {
 
     }
 
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .popup {
+        width: 30%;
+        margin-left: 35%;
+        margin-right: 35%;
+    }
+}
+
     section#footer {
         background: url("../img/15_let_s_pozad¡m.png") no-repeat 100%;
         min-height: 600px;
         background-size: cover;
 
-        .height-lg {
+        .height-lg{ 
             height: calc(600px - 6rem);
         }
+
 
     }
 }
