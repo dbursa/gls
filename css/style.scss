@@ -322,6 +322,25 @@ section#footer {
         color:  $pure-white;
     }
 }
+
+/*
+* branch vojtafe styles
+*/
+
+  
+hr.srdce{
+    text-align: center; /* horizontal centering */
+    line-height: 1px; /* vertical centering */
+    height: 1px; /* gap between the lines */
+    border-style: solid;
+
+    &::after{
+        content: url("../img/srdicko.png");
+        position: relative;
+        top: -22px;
+    } 
+  }
+  
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
 
@@ -335,23 +354,6 @@ section#footer {
         margin-right: 25%;
     }
 
-/*
-* branch vojtafe styles
-*/
-
-  
-  hr.srdce{
-    text-align: center; /* horizontal centering */
-    line-height: 1px; /* vertical centering */
-    height: 1px; /* gap between the lines */
-    border-style: solid;
-
-    &::after{
-        content: url("../img/srdicko.png");
-        position: relative;
-        top: -22px;
-    } 
-  }
     .anti-row {
         display: flex !important;
     }
