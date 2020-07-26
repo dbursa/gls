@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="frontend/css/style.css">
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta name="csrf_name" content="<?= $name ?>" />
     <meta name="csrf_value" content="<?= $value ?>" />
     
@@ -209,17 +208,15 @@
                 Váš hlas byl odeslán!
             </div>
             <div class="col-12 no-padding">
-                <form>
                     <div class="col-12 no-padding pt-3 pb-4">
                         <input class="w-100 p-1" type="email" id="email_input">
                     </div>
                     <div class="col-12 no-padding text-center">
-                        <button class="px-4 py-3" type="submit" id="button_vote"><b>Odeslat hlas</b></button>
+                        <button class="px-4 py-3" id="button_vote"><b>Odeslat hlas</b></button>
                     </div>
                     <div class="col-12 no-padding text-center">
                         <button class="px-4 py-3 vote" id="button_close"><b><a href="#">Zavřít</a></b></button>
                     </div>
-                </form>
             </div>
         </div>
     </div>
@@ -446,6 +443,7 @@
         </div>
     </footer>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
