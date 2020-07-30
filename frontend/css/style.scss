@@ -53,6 +53,7 @@ small {
     position: relative;
     width: 200px;
     height: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
 .rounded-img img {
@@ -67,6 +68,7 @@ small {
     overflow: hidden;
     display: inline-block;
     position: relative;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.4);
 }
 
 .rounded-img-small img {
@@ -247,8 +249,10 @@ section#project-kapka {
     }
 
     .rounded-img-small img {
+        //margin-left: -20px;
         width: 120px;
         height: auto;
+        //transform: rotate(90deg);
     }
 }
 
@@ -333,9 +337,15 @@ hr.srdce{
     border-style: solid;
 
     &::after{
-        content: url("../img/srdicko.png");
+        content: "";
+        background-image: url('../img/srdce.png');
+        background-repeat: no-repeat;
+        background-size: 80px 80px;
+        display: inline-block;
         position: relative;
-        top: -22px;
+        top: -36px;
+        width: 80px; 
+        height: 80px;
     } 
   }
   
@@ -365,7 +375,8 @@ hr.srdce{
     }
 
     section#intro {
-        background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../img/uvodni_foto_sm.jpg") no-repeat;
+        background: linear-gradient(-90deg,rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)), url("../img/uvodni_foto_sm.jpg") no-repeat;
+        //background: url("../img/uv.png") no-repeat;
         background-position: 60% 20%;
         min-height: 750px;
 

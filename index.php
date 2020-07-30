@@ -41,6 +41,10 @@ $container->set('renderer', function () {
 $app = AppFactory::create();
 $responseFactory = $app->getResponseFactory();
 
+// Set the base path of the Slim App
+$basePath = str_replace('/' . basename(__FILE__), '', $_SERVER['SCRIPT_NAME']);
+$app = $app->setBasePath($basePath);
+
 // Body Parsing middleware
 $app->addBodyParsingMiddleware();
 
@@ -78,6 +82,13 @@ $app->get('/', function (Request $request, Response $response, $args){
     $name = $request->getAttribute($nameKey);
     $value = $request->getAttribute($valueKey);
 
+    $now = time(); // or your date as well
+    $your_date = strtotime("2020-09-30");
+    $datediff = $your_date - $now;
+
+    $days = round($datediff / (60 * 60 * 24));
+
+
     // Celkovy pocet hlasu
     $actions = $this->get('actions');
     $votes_count = $actions->votesCount();
@@ -87,7 +98,9 @@ $app->get('/', function (Request $request, Response $response, $args){
         'valueKey' => $valueKey,
         'name' => $name,
         'value' => $value,
-        'votes_count' => $votes_count
+        'votes_count' => $votes_count,
+        'days' => $days,
+
     ]);
 });
 

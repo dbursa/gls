@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='shortcut icon' type='image/x-icon' href='https://gls-group.eu/resources/22390317/img/favicon.ico' />
     <link rel="stylesheet" href="frontend/css/style.css">
 
     <meta name="csrf_name" content="<?= $name ?>" />
     <meta name="csrf_value" content="<?= $value ?>" />
     
-    <title>GLS</title>
+    <title>We deliver, we care | GLS</title>
 </head>
 <body>
 <section id="intro">
@@ -51,25 +52,25 @@
                 <p>
                     V letošním roce slavíme <b>15 let na českém balíkovém trhu.</b>
                     Za tu dobu jsme vybudovali jednu z nejkvalitnějších
-                    a nejsposlehlivějších přepravních sítí v České republice.
+                    a nejspolehlivějších přepravních sítí v České republice.
                     Za naším úspěchem stojí hlavně lidé v našem týmu, a proto
-                    neustále dbáme, ab u nás byli spokojeni. Společně se také
+                    neustále dbáme, aby u nás byli spokojeni. Společně se také
                     již od počátku firmy aktivně věnujeme zdravotně
-                    a sociálně znevýhodněným lidem. V rámci našheo celoevropského
+                    a sociálně znevýhodněným lidem. V rámci našeho celoevropského
                     programu <b>ThinkSocial</b> po celé Evropě pravidelně podporujeme
                     lokální dobročinné projekty.
                 </p>
                 <p>
                     Místo velkolepých oslav k 15. letům výročí GLS v Česku jsme
                     se rozhodli společně s kolegy věnovat peněžitý dar na vybrané
-                    charitativní projekty. Nechal jsme všechny naše zaměstnance
+                    charitativní projekty. Nechali jsme všechny naše zaměstnance
                     i spolupracovníky na všech 24 depech v ČR <b>nominovat a vybrat
                     tři charitativní neziskové projkety nebo organizace</b>,
                     o kterých si myslí, že si naší podporu zaslouží.
                 </p>
                 <p>
-                    Pomocí vašich hlasů nyný rozhodneme, jak si mezi sebe
-                    tito finalisté blízcí našemu srdci rozdělí dar ve výší <b>100 000 Kč</b>.
+                    Pomocí vašich hlasů nyní rozhodneme, jak si mezi sebe
+                    tito finalisté blízcí našemu srdci rozdělí dar ve výši <b>100 000 Kč</b>.
                     Pošlete svůj hlas svému favoritovi a pomozte mu k co nejvyšší částce!
                 </p>
             </div>
@@ -179,7 +180,7 @@
                         jednou bude pro nás?“
                     </p>
                     <p class="text-md-right">
-                       <small>- Jan Zvolský, Kurýr (depo GLS Karlovy Vary)</small>
+                       - Jan Zvolský, Kurýr (depo GLS Karlovy Vary)
                     </p>
                 </div>
                 <div class="col-6 offset-md-6 col-md-3 text-center text-md-right">
@@ -199,7 +200,7 @@
                 <a href="#" class="close-btn">X</a>
             </div>
             <div class="col-12 no-padding text-center">
-                <h6 class="popup-text" id="popup-text">Vyplňte prosím svou <b>e-mail adresu:</b></h6>
+                <h6 class="popup-text" id="popup-text">Vyplňte prosím svou <b>e-mailovou adresu:</b></h6>
             </div>
             <div class="alert alert-danger col-12 no-padding text-center my-2" id="popup-error-alert" role="alert">
                 This is a danger alert—check it out!
@@ -225,13 +226,13 @@
 <section id="project-centrum">
     <div class="container pt-3 pb-md-5">
         <div class="row no-gutters">
-            <div class="col-md-4 d-none d-md-inline-block">            
+            <div class="col-md-3 d-none d-md-inline-block">            
                 <div class="rounded-img">
                     <img class="" src="frontend/img/Dětské centrum Jihlava.jpg" alt="">
                 </div>
             </div>
-            <div class="col-md-8 text-md-right">
-                <div class="m-0 col-12 text-center text-md-left pb-md-3">
+            <div class="col-md-9 text-md-right">
+                <div class="m-0 col-12 text-center text-md-left pb-md-3 ml-md-2">
                     <h2><b>Dětské centrum Jihlava</b></h2>
                 </div>
                 <div class="text-center py-3 d-md-none">
@@ -266,7 +267,7 @@
                         Můj hlas tentokrát zůstává na Vysočině, která je sídlem centrály české GLS a mým domovem.“
                     </p>
                     <p>
-                       <small>- Pavel Včela, Division Manager GLS Czech republic</small>
+                       - Pavel Včela, Division Manager GLS Czech republic
                     </p>
                 </div>
 
@@ -281,7 +282,7 @@
     </div>
 </section>
 <section id="project-fond">
-    <div class="container pt-3">
+    <div class="container pt-3 pb-md-5">
         <div class="row no-gutters">
             <div class="col-md-8">
                 <div class="m-0 col-12 text-center text-md-left pb-md-3">
@@ -328,7 +329,7 @@
                         si tento nadační fond můj hlas zaslouží.“
                     </p>
                     <p class="text-right">
-                       <small>- Iveta Bednaříková, Vedoucí zákaznického centra GLS</small>
+                       - Iveta Bednaříková, Vedoucí zákaznického centra GLS
                     </p>
                 </div>
                     <div class="col-6 offset-md-6 col-md-3 text-center text-md-right">
@@ -391,7 +392,7 @@
                     <p class="numbers m-0"><?= $votes_count ?></p>
                 </div>
                 <div class="col-5">
-                    <p class="numbers m-0">50</p>
+                    <p class="numbers m-0"><?= $days ?></p>
                 </div>
                 <div class="col-5 offset-1">
                     <h4>hlasů</h4>
@@ -408,9 +409,9 @@
         <div class="container text-left height-lg">
             <div class="pb-3 pb-md-5 text-center text-md-left">
                 <h4 class="pb-3 d-md-none"><b>Sdílejte projekt se známými</b></h4>
-                <h5 class="d-md-none"> - dejte jim o možnosti pomáhat vědět na Facebooku!</h5>
+                <h5 class="d-md-none">Dejte jim o možnosti pomáhat vědět na Facebooku!</h5>
                 <h3 class="d-none d-md-block"><b>Sdílejte projekt se známými</b></h4>
-                <h4 class="d-none d-md-block"> - dejte jim o možnosti pomáhat vědět na Facebooku!</h5>
+                <h4 class="d-none d-md-block">Dejte jim o možnosti pomáhat vědět na Facebooku!</h5>
             </div>
             <div class="w-100 text-center text-md-left">
                 <button id="fb-root" class="px-4 py-2">
