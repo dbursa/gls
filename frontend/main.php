@@ -65,7 +65,7 @@
                     se rozhodli společně s kolegy věnovat peněžitý dar na vybrané
                     charitativní projekty. Nechali jsme všechny naše zaměstnance
                     i spolupracovníky na všech 24 depech v ČR <b>nominovat a vybrat
-                    tři charitativní neziskové projkety nebo organizace</b>,
+                    tři charitativní neziskové projekty nebo organizace</b>,
                     o kterých si myslí, že si naší podporu zaslouží.
                 </p>
                 <p>
@@ -232,7 +232,7 @@
                 </div>
             </div>
             <div class="col-md-9 text-md-right">
-                <div class="m-0 col-12 text-center text-md-left pb-md-3 ml-md-2">
+                <div class="m-0 col-12 text-center text-md-right pb-md-3 ml-md-2">
                     <h2><b>Dětské centrum Jihlava</b></h2>
                 </div>
                 <div class="text-center py-3 d-md-none">
@@ -267,7 +267,7 @@
                         Můj hlas tentokrát zůstává na Vysočině, která je sídlem centrály české GLS a mým domovem.“
                     </p>
                     <p>
-                       - Pavel Včela, Division Manager GLS Czech republic
+                       - Pavel Včela, Division Manager GLS Czech Republic
                     </p>
                 </div>
 
@@ -341,9 +341,9 @@
             </div>
         </div>
     </div>
-    <hr class="srdce">
 </section>
 <section id="results">
+    <hr class="srdce">
     <div class="container pt-3 text-center w-100 pb-3 pb-md-5">
         <div class="row no-gutters d-md-none">
             <div class="col-12">
