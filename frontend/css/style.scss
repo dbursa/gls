@@ -446,10 +446,11 @@ section#footer {
 
     section#project-kapka {    
         .rounded-img-small img {
-            margin-left: -60px;
+            margin-left: -70px;
+            margin-top: -40px;
             width: 250px;
             height: auto;
-            transform: rotate(90deg);
+            //transform: rotate(90deg);
         }
     }
 
