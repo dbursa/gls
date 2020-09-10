@@ -1,3 +1,7 @@
+# Composer
+composer.phar
+/vendor/
+
 # Logs
 logs
 *.log
@@ -102,3 +106,5 @@ dist
 
 # TernJS port file
 .tern-port
+css/style.css
+frontend/css/style.css

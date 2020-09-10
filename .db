@@ -1,0 +1,16 @@
+CREATE TABLE `votes` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `project_id` int NOT NULL,
+  `email` varchar(255) UNIQUE NOT NULL,
+  `created_at` timestamp DEFAULT now()
+);
+
+CREATE TABLE `projects` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `project_name` varchar(255)
+);
+ALTER TABLE `votes` ADD FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`);
+
+INSERT INTO `projects` (`project_name`) VALUES ('Kapka naděje');
+INSERT INTO `projects` (`project_name`) VALUES ('Dětské centrum Jihlava');
+INSERT INTO `projects` (`project_name`) VALUES ('Nadační fond Josefa Zimovčáka');
