@@ -1,2 +1,3 @@
 # gls
-Small voting page for GLS
+
+composer install

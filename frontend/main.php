@@ -70,8 +70,8 @@
                 </p>
                 <p>
                     Pomocí vašich hlasů nyní rozhodneme, jak si mezi sebe
-                    tito finalisté blízcí našemu srdci rozdělí dar ve výši <b>100 000 Kč</b>.
-                    Pošlete svůj hlas svému favoritovi a pomozte mu k co nejvyšší částce!
+                    tito finalisté blízcí našemu srdci rozdělí dar ve výši <strong>100 000 Kč. A od dnešního dne navíc věnujeme dalších 10 Kč za každý hlas té organizaci, pro kterou budete hlasovat.</strong>
+                    Pomozte svému favoritovi k co nejvyšší částce!
                 </p>
             </div>
         <div class="col-12 text-right pb-5">
@@ -85,7 +85,8 @@
 <section id="rules">
     <div class="container pt-3">
         <div class="text-center col-12 py-3">
-            <h1 class="m-0"><b>Jak probíhá hlasování</b></h1>
+            <h1 class="m-0"><b>Váš hlas má cenu</b></h1>
+            <h4>Za každý Váš hlas věnujeme vybrané organizaci dalších 10 Kč!</h4>
         </div>
         <div class="row text-center">
             <div class="col-12 col-md-4 pb-2">
@@ -123,6 +124,8 @@
                         rozdělíme mezi tři vybrané
                         projekty poměrově podle
                         procentuálního počtu hlasů.
+                        A navíc za každý hlas vybrané organizaci 
+                        věnujeme dalších 10 Kč!
                     </p>
                 </div>
             </div>
