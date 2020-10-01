@@ -69,10 +69,16 @@
                     o kterých si myslí, že si naší podporu zaslouží.
                 </p>
                 <p>
-                    Pomocí vašich hlasů nyní rozhodneme, jak si mezi sebe
-                    tito finalisté blízcí našemu srdci rozdělí dar ve výši <strong>100 000 Kč. A od dnešního dne navíc věnujeme dalších 10 Kč za každý hlas té organizaci, pro kterou budete hlasovat.</strong>
-                    Pomozte svému favoritovi k co nejvyšší částce!
+                Pomoci vašich hlasů si mezi sebe tři finalisté rozdělili <strong> 100.000 Kč a
+                od 22. do 30. září jsme za každý další hlas věnovali vybrané
+                organizaci dodatečných 10 Kč</strong>. Jak dopadlo hlasování a kolik
+                vybraným organizacím věnujeme?
                 </p>
+                <ul>
+                <li><strong>Kapka Naděje: 72.930 Kč</strong></li>
+                <li><strong>Dětské centrum Jihlava: 15.650 Kč</strong></li>
+                <li><strong>Nadační fond Josefa Zimovčáka: 15.480 Kč</strong></li>
+                </ul>
             </div>
         <div class="col-12 text-right pb-5">
             <button class="px-4 py-2" id="thinkSocial">
@@ -109,10 +115,9 @@
                 <img class="img-fluid w-50" src="frontend/img/2.png" alt="Dva">
                 <div class="w-75 d-inline-block">
                     <p>
-                        Hlasování probíhá
-                        <b>do 30. září</b>. Hlasovat můžete
-                        pouze jednou, a to zadáním
-                        platné <b>e-mailové adresy</b>.
+                        Hlasování probíhalo
+                        <b>do 30. září</b> zadáním platné
+                        <b>e-mailové adresy</b>.
                     </p>
                 </div>
             </div>
@@ -120,12 +125,12 @@
                 <img class="img-fluid w-50" src="frontend/img/3.png" alt="Tri">
                 <div class="w-75 d-inline-block">
                     <p>
-                        Částku <b>100 000 Kč</b>
-                        rozdělíme mezi tři vybrané
-                        projekty poměrově podle
-                        procentuálního počtu hlasů.
-                        A navíc za každý hlas vybrané organizaci 
-                        věnujeme dalších 10 Kč!
+                        Částku <b>100.000 Kč</b> si rozdělili
+                        tři vybrané projekty poměrově
+                        podle procentuálního počtu
+                        hlasů a od 22. 9. jsme navíc za
+                        každý hlas věnovali dané
+                        organizaci dalších 10 Kč.
                     </p>
                 </div>
             </div>
@@ -374,9 +379,9 @@
                     </b>
                 </h3>
             </div>
-            <div class="col-12"><p class="numbers m-0">50</p></div>
-            <div class="col-12"><h5 class="d-md-none">dní</h5></div> 
-            <div><h4 class="d-none d-md-block">dní</h4></div> 
+            <div class="col-12 d-flex flex-column align-items-center justify-content-center"><p class="numbers-text m-0">Hlasování skončilo</p></div>
+            <!-- <div class="col-12"><h5 class="d-md-none">dní</h5></div> 
+            <div><h4 class="d-none d-md-block">dní</h4></div>  -->
         </div>
         <div class="d-none d-md-block">
             <div class="row no-gutters">
@@ -394,15 +399,15 @@
                 <div class="col-5 offset-1">
                     <p class="numbers m-0"><?= $votes_count ?></p>
                 </div>
-                <div class="col-5">
-                    <p class="numbers m-0"><?= $days ?></p>
+                <div class="col-5 d-flex flex-column align-items-center justify-content-center">
+                    <p class="numbers-text m-0">Hlasování skončilo</p>
                 </div>
-                <div class="col-5 offset-1">
+                <!-- <div class="col-5 offset-1">
                     <h4>hlasů</h4>
                 </div>
                 <div class="col-5">
                     <h4>dní</h4>
-                </div> 
+                </div>  -->
             </div>
         </div>
     </div>
