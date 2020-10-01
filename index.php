@@ -82,11 +82,29 @@ $app->get('/', function (Request $request, Response $response, $args){
     $name = $request->getAttribute($nameKey);
     $value = $request->getAttribute($valueKey);
 
-    $now = time(); // or your date as well
-    $your_date = strtotime("2020-09-30");
-    $datediff = $your_date - $now;
+    /**
+     * Cas do konce
+     */
+    $date = new DateTime("now", new DateTimeZone('Europe/Prague') );
+    $dateZari = new DateTime('2020-09-30 23:59:59', new DateTimeZone('Europe/Prague'));
+    $timestampToday = strtotime($date->format('Y-m-d H:i:s'));
+    $timestampZari = strtotime($dateZari->format('Y-m-d H:i:s'));
 
-    $days = round($datediff / (60 * 60 * 24));
+
+    $dateDifference = $timestampZari - $timestampToday;
+    $days = floor($dateDifference / (60 * 60 * 24));
+
+    if ($days < 0)
+    {
+        $days = 0;
+    }
+
+
+    // $now = time(); // or your date as well
+    // $your_date = strtotime("2020-09-30");
+    // $datediff = $your_date - $now;
+
+    // $days = round($datediff / (60 * 60 * 24));
 
 
     // Celkovy pocet hlasu
